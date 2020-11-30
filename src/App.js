@@ -4,12 +4,14 @@ import ShopePage from './pages/homepage/shop/shop.component';
 
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/header/header.component';
+import SignInAndUp from './pages/sign-in-and-up/sign-in-and-up.component';
 
 function App() {
   return (
     <div>
       <Header />
       <Switch>
+        <Route path='/signin' component={SignInAndUp} />
         <Route path='/shop' component={ShopePage} />
         <Route path='/' component={HomePage} />
       </Switch>
