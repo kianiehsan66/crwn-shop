@@ -5,5 +5,7 @@ body {
 a {
     text-decoration: none;
     color: black;
-    font-size: xx-large;
+}
+* {
+    box-sizing: border-box;
 }
