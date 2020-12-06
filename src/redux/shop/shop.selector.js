@@ -11,12 +11,14 @@ export const selectShopCollectionsForPreview = createSelector(
     collections => Object.keys(collections).map(key => collections[key])
 )
 
-
-
+export const selectIsFetching = createSelector([selectShop],
+    shop => shop.isFetching);
+export const selectIsFetched = createSelector([selectShop],
+    shop => !!shop.collections);
 
 export const selectCollection = collectionId => createSelector(
     [selectShopCollections],
-    collections => collections[collectionId]
+    collections => collections ? collections[collectionId] : null
 )
 
 
