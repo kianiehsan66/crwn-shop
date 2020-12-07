@@ -8,7 +8,7 @@ export const selectShopCollections = createSelector([selectShop],
 
 export const selectShopCollectionsForPreview = createSelector(
     [selectShopCollections],
-    collections => Object.keys(collections).map(key => collections[key])
+    collections => collections ? Object.keys(collections).map(key => collections[key]) : null
 )
 
 export const selectIsFetching = createSelector([selectShop],
